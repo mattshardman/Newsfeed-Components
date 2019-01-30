@@ -1,9 +1,13 @@
+header, div {
+  box-sizing: border-box;
+}
+
 .articles {
   margin-top: 95px;
 }
 .article {
   margin: 20px auto;
-  padding: 0 20px 25px;
+  padding: 35px 35px;
   width: 800px;
   max-width: 90%;
   border-radius: 10px;
@@ -12,10 +16,12 @@
   overflow: hidden;
   box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
 
+  
+
   h2 {
     font-size: 28px;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 0;
   }
 
   .date {
@@ -30,26 +36,33 @@
   }
 
   .expandButton {
-    position: absolute;
-    bottom: 0;
-    width: 70px;
-    height: 50px;
-    left: 100%;
     font-size: 12px;
     color: grey;
     cursor: pointer;
-    transform: translateX(-100%);
     display: flex;
     justify-content: center;
     align-items: center;
 
     .material-icons {
-      transition: 400ms all;
+      transition: 1s transform;
+      font-size: 45px;
     }
 
     .arrow-open {
       transform: rotate(180deg);
     }
+  }
+
+  .close-btn {
+    height: 25px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: grey;
+    border: 1px solid #eaeaea;
   }
 
   .content {
@@ -61,4 +74,18 @@
   .content-open {
     max-height: 600px;
   }
+
+  .buttons {
+    margin-top: 25px;
+    display: flex;
+    height: 30px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+}
+
+.close {
+  display: none;
 }

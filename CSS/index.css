@@ -65,12 +65,16 @@
 .menu--open {
   transform: translateX(0%);
 }
+header,
+div {
+  box-sizing: border-box;
+}
 .articles {
   margin-top: 95px;
 }
 .article {
   margin: 20px auto;
-  padding: 0 20px 25px;
+  padding: 35px 35px;
   width: 800px;
   max-width: 90%;
   border-radius: 10px;
@@ -82,7 +86,7 @@
 .article h2 {
   font-size: 28px;
   padding: 0;
-  margin: 15px 0 0;
+  margin: 0;
 }
 .article .date {
   margin: 0;
@@ -94,24 +98,30 @@
   right: 10px;
 }
 .article .expandButton {
-  position: absolute;
-  bottom: 0;
-  width: 70px;
-  height: 50px;
-  left: 100%;
   font-size: 12px;
   color: grey;
   cursor: pointer;
-  transform: translateX(-100%);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .article .expandButton .material-icons {
-  transition: 400ms all;
+  transition: 1s transform;
+  font-size: 45px;
 }
 .article .expandButton .arrow-open {
   transform: rotate(180deg);
+}
+.article .close-btn {
+  height: 25px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  color: grey;
+  border: 1px solid #eaeaea;
 }
 .article .content {
   max-height: 0;
@@ -120,6 +130,17 @@
 }
 .article .content-open {
   max-height: 600px;
+}
+.article .buttons {
+  margin-top: 25px;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.close {
+  display: none;
 }
 html,
 body {
