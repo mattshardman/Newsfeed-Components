@@ -5,26 +5,26 @@
 }
 
 .menu {
-  display: none;
   position: fixed;
+  transform: translateX(-100%);
   top: 75px;
   left: 0;
-  width: 350px;
+  width: 250px;
   height: 100vh; /* This give the height 100% of the screen or, '100% of View Height' */
-  background-color: #81C784;
-  border: 1px solid #004D40;
-  border-left: none;
-  border-bottom: none;
+  background-color: #fff;
+  box-shadow: 3px 0 25px rgba(0,0,0,0.2);
   z-index: 2; /* This set the layer level of the element, it has precendence over initial level of 1*/
-}
+  transition: all 420ms;
 
-.menu ul li{
+  ul li {
   list-style-type: none;
-  font-size: 32px;
-  padding: 30px 0;
-  text-align: center;
+  font-size: 20px;
+  padding: 10px 0;
+  text-align: left;
+  list-style-position: outside;
+  }
 }
 
 .menu--open {
-  display: block;
+  transform: translateX(0%);
 }
