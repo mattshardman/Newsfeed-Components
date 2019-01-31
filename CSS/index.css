@@ -22,23 +22,130 @@
 .header {
   width: 100%;
   height: 75px;
-  background-color: #388E3C;
+  background-color: #40a8e4;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   top: 0;
-  z-index: 2;
+  box-shadow: 0 3px 25px rgba(0, 0, 0, 0.2);
+  z-index: 20;
 }
 .header h1 {
   margin: 0;
-  font-size: 48px;
+  font-size: 30px;
+}
+.menu-button {
+  position: absolute;
+  left: 20px;
+  cursor: pointer;
+}
+.menu {
+  position: fixed;
+  transform: translateX(-100%);
+  top: 75px;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  /* This give the height 100% of the screen or, '100% of View Height' */
+  background-color: #fff;
+  box-shadow: 3px 0 25px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+  /* This set the layer level of the element, it has precendence over initial level of 1*/
+  transition: all 420ms;
+}
+.menu ul li {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 10px 0;
+  text-align: left;
+  list-style-position: outside;
+}
+.menu--open {
+  transform: translateX(0%);
+}
+header,
+div {
+  box-sizing: border-box;
+}
+.articles {
+  margin-top: 95px;
+}
+.article {
+  margin: 20px auto;
+  padding: 35px 35px;
+  width: 800px;
+  max-width: 90%;
+  border-radius: 10px;
+  background-color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+}
+.article h2 {
+  font-size: 28px;
+  padding: 0;
+  margin: 0;
+}
+.article .date {
+  margin: 0;
+  font-size: 14px;
+}
+.article .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.article .expandButton {
+  font-size: 12px;
+  color: grey;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.article .expandButton .material-icons {
+  transition: 1s transform;
+  font-size: 45px;
+}
+.article .expandButton .arrow-open {
+  transform: rotate(180deg);
+}
+.article .close-btn {
+  height: 25px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 5px;
+  color: grey;
+  border: 1px solid #eaeaea;
+}
+.article .content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms;
+}
+.article .content-open {
+  max-height: 600px;
+}
+.article .buttons {
+  margin-top: 25px;
+  display: flex;
+  height: 30px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.close {
+  display: none;
 }
 html,
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto';
-  background-color: #fffef7;
+  background-color: #fff;
 }

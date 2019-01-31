@@ -1,21 +1,27 @@
+header, div {
+  box-sizing: border-box;
+}
+
 .articles {
   margin-top: 95px;
 }
 .article {
-  margin: 20px 10%;
-  padding: 0 20px 25px;
-  border: 1px solid lightgrey;
+  margin: 20px auto;
+  padding: 35px 35px;
+  width: 800px;
+  max-width: 90%;
   border-radius: 10px;
   background-color: white;
   position: relative;
-  height: 50px;
   overflow: hidden;
-  box-shadow: 2px 2px 2px lightgrey;
+  box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+
+  
 
   h2 {
     font-size: 28px;
     padding: 0;
-    margin: 15px 0 0;
+    margin: 0;
   }
 
   .date {
@@ -30,21 +36,56 @@
   }
 
   .expandButton {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
     font-size: 12px;
     color: grey;
     cursor: pointer;
-    transform: translate(-50%);
-    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .material-icons {
+      transition: 1s transform;
+      font-size: 45px;
+    }
+
+    .arrow-open {
+      transform: rotate(180deg);
+    }
+  }
+
+  .close-btn {
+    height: 25px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    color: grey;
+    border: 1px solid #eaeaea;
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 400ms;
+  }
+
+  .content-open {
+    max-height: 600px;
+  }
+
+  .buttons {
+    margin-top: 25px;
+    display: flex;
+    height: 30px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
   }
 }
 
-.article-open {
-  height: 400px;
+.close {
+  display: none;
 }
-
-
-
-
